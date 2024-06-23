@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+}
+.container{
+   width: 300px;
+   height: 300px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 20px  black inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   box-sizing: border-box;
+   perspective: 1000px;
+}
+.clock{
+   width: 250px;
+   height:250px;
+   border-radius: 50%;
+   background:url(./clock.png) ;
+   filter: drop-shadow(0.1px 0.1px 2px black);
+   box-shadow: 2px 2px 3px black inset;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(-50px);
+}
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+
+
+}
+.clock .hrs,
+.clock .min,
+.clock .sec{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+.clock .hrs{
+    height: 100px;
+    width: 100px;
+    border-radius:50%;
+    
+    border: 2px solid rgb(13, 10, 232);
+    
+
+    }
+.clock .min{
+    height: 130px;
+    width: 130px;
+    border-radius:50%;
+    border: 2px solid rgb(231, 74, 12);
+}
+.clock .sec{
+    height: 160px;
+    width: 160px;
+    border-radius:50%;
+    stroke-dasharray: 10;
+    stroke: rgb(13,10,232);
+    stroke-width:20px ;
+    border: 2px solid greenyellow;
+}
+.hrs::before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 60px;
+    border:2px solid rgb(60, 14, 225);
+    border-radius: 50%;
+}
+.min::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 90px;
+    border:2px solid rgb(234, 9, 9);
+    border-radius: 50%;
+}
+.sec::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    border:2px solid rgb(10, 227, 42);
+    border-radius: 50%;
+}
+ .dot::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 12px;
+    border:2px solid rgb(10, 227, 42);
+   
+}
+.dot1::before{border:2px solid rgb(60, 14, 225); border-radius: 50%; }
+.dot2::before{ border:2px solid rgb(234, 9, 9); border-radius: 50%; }
+.dot3::before{ border:2px solid rgb(24, 234, 9); border-radius: 50%; }
